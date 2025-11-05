@@ -28,6 +28,8 @@ class Users extends Component
     ]);
 
     $this->reset();
+
+    session()->flash('success', 'Success created user data');
   }
 
   public function render()
