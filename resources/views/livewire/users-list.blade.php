@@ -19,7 +19,7 @@
   </form>
 
   <ul role="list" class="divide-y divide-gray-100">
-    @foreach ($users as $user)
+    @foreach ($this->users as $user)
       <li class="flex items-center justify-between gap-x-6 py-5">
         <div class="flex min-w-0 gap-x-4">
           <img src="{{ $user->avatar ? asset('storage/' . $user->avatar) : asset('img/default-avatar.png') }}"
@@ -35,5 +35,5 @@
       </li>
     @endforeach
   </ul>
-  {{ $users->links() }}
+  {{ $this->users->links() }}
 </div>
